@@ -1,0 +1,167 @@
+{
+  "rules": [
+    {
+      "ruleType": "UI",
+      "dataModelGroup": 1,
+      "ruleSetId": 1,
+      "ruleId": 15,
+      "ruleName": "multiple_data_model",
+      "effectiveDateStart": 1609434000000,
+      "effectiveDateEnd": 1640969999999,
+      "status": true,
+      "description": "multiple data model",
+      "listRule": [
+        {
+          "itemCondition": [
+            {
+              "items": [
+                {
+                  "type": "normal",
+                  "table": "Model_8b",
+                  "field": "name_8",
+                  "condition": "",
+                  "tableIndex": 2,
+                  "left": "$Model_8b.name_8",
+                  "operator": ">=",
+                  "right": "10"
+                },
+                {
+                  "type": "normal",
+                  "table": "Model_9a",
+                  "field": "name_9c",
+                  "condition": "AND",
+                  "tableIndex": 1,
+                  "left": "$Model_9a.name_9c",
+                  "operator": ">=",
+                  "right": "20"
+                }
+              ],
+              "condition": ""
+            }
+          ],
+          "action": {
+            "returnType": "RETURN",
+            "value": "100"
+          },
+          "dataModels": [
+            {
+              "tableName": "Model_8b",
+              "id": 53,
+              "attributes": [
+                {
+                  "id": 75,
+                  "name": "name_8",
+                  "dataType": "NUMBER"
+                }
+              ]
+            },
+            {
+              "tableName": "Model_9a",
+              "id": 54,
+              "attributes": [
+                {
+                  "id": 84,
+                  "name": "name_9c",
+                  "dataType": "NUMBER"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "itemCondition": [],
+          "action": {
+            "returnType": "RETURN",
+            "value": "0"
+          }
+        }
+      ],
+      "vocabularies": [
+        {
+          "id": -1,
+          "tableName": "Choose Table",
+          "attributes": [
+            {
+              "id": -1,
+              "name": "Choose Attribute"
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "tableName": "Model_9a",
+          "isSelected": true,
+          "attributes": [
+            {
+              "id": 84,
+              "status": "ACTIVE",
+              "name": "name_9c",
+              "dataType": "NUMBER"
+            },
+            {
+              "id": 81,
+              "status": "ACTIVE",
+              "name": "name 9a",
+              "dataType": "STRING"
+            },
+            {
+              "id": 82,
+              "status": "ACTIVE",
+              "name": "name 9a",
+              "dataType": "STRING"
+            },
+            {
+              "id": 80,
+              "status": "ACTIVE",
+              "name": "name 9",
+              "dataType": "STRING"
+            },
+            {
+              "id": 83,
+              "status": "ACTIVE",
+              "name": "name 9o",
+              "dataType": "STRING"
+            },
+            {
+              "id": 76,
+              "status": "ACTIVE",
+              "name": "name 9",
+              "dataType": "NUMBER"
+            },
+            {
+              "id": 85,
+              "status": "ACTIVE",
+              "name": "name_9c",
+              "dataType": "NUMBER"
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "tableName": "Model_8b",
+          "isSelected": true,
+          "attributes": [
+            {
+              "id": 75,
+              "status": "ACTIVE",
+              "name": "name_8",
+              "dataType": "NUMBER"
+            },
+            {
+              "id": 79,
+              "status": "ACTIVE",
+              "name": "name_8",
+              "dataType": "NUMBER"
+            },
+            {
+              "id": 78,
+              "status": "ACTIVE",
+              "name": "name_8",
+              "dataType": "NUMBER"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Rule_Management_Service++
+Rule_Management_Service -> Rule_Engine++: Call api generate all rule
+
+Rule_Engine -> Rule_Engine++: validate input
+Rule_Engine --> Rule_Engine--: validate done
+
+Rule_Engine -> Rule_Engine++: create data model by data input
+Rule_Engine --> Rule_Engine--: create done
+
+Rule_Engine -> Rule_Engine++: create rule by data input
+Rule_Engine --> Rule_Engine--: create done
+
+Rule_Engine -> Rule_Engine++: generate rule to drl file
+
+Rule_Engine -> Resource_File++: create drl file
+Resource_File --> Rule_Engine--: return response
+
+Rule_Engine --> Rule_Engine--: generate done
+
+Rule_Engine --> Rule_Management_Service--: return response
+Rule_Management_Service--
+
+@enduml

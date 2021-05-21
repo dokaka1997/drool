@@ -1,0 +1,47 @@
+package rules 
+
+import java.util.*
+import java.math.*
+
+global List results
+
+dialect "mvel"
+
+declare  Customer2 
+
+    age1 : Number  
+    age2 : Number  
+    age3 : Number  
+end
+
+
+rule "formula_condition0"
+    activation-group "1.formula_condition"
+    salience 2
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+     
+when
+    $Customer2 : Customer2(  )  
+    Object( (($Customer2.age1 + $Customer2.age2 == $Customer2.age3)) )  
+then
+results.add("ACTION")
+
+end
+
+rule "formula_condition1"
+    activation-group "1.formula_condition"
+    salience 1
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+     
+when
+    Object(  )  
+then
+results.add("")
+
+end
+
+

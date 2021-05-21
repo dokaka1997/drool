@@ -1,0 +1,20 @@
+package rules 
+
+import java.util.*
+import java.math.*
+
+global List results
+
+dialect "mvel"
+
+rule "null0"
+    activation-group "null.null"
+    salience 1
+when
+    Object(  )  
+then
+
+
+end
+
+

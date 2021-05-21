@@ -1,0 +1,68 @@
+{
+  "rules": [
+    {
+      "ruleType": "UI",
+      "dataModelGroup": 1,
+      "ruleSetId": 1,
+      "ruleId": 23,
+      "ruleName": "deletion-rule",
+      "effectiveDateStart": 1609434000000,
+      "effectiveDateEnd": 1640969999999,
+      "status": true,
+      "description": "deletion rule",
+      "attributes": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "listRule": [
+        {
+          "order": 0,
+          "itemCondition": [
+            {
+              "items": [
+                {
+                  "type": "normal",
+                  "table": "Deletion_Model",
+                  "field": "field",
+                  "condition": "",
+                  "tableIndex": 0,
+                  "left": "$Deletion_Model.field",
+                  "operator": "==",
+                  "right": "10"
+                }
+              ],
+              "condition": ""
+            }
+          ],
+          "action": {
+            "returnType": "RETURN",
+            "value": "ACTION"
+          },
+          "dataModels": [
+            {
+              "tableName": "Deletion_Model",
+              "attributes": [
+                {
+                  "id": 1,
+                  "name": "field",
+                  "dataType": "NUMBER"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 1,
+          "itemCondition": [],
+          "action": {
+            "returnType": "RETURN",
+            "value": ""
+          },
+          "dataModels": []
+        }
+      ]
+    }
+  ]
+}

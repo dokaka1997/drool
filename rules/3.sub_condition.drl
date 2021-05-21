@@ -1,0 +1,43 @@
+package rules 
+
+import java.util.*
+import java.math.*
+
+global List results
+
+dialect "mvel"
+
+declare  Model_8b 
+
+    name_8 : Number  
+end
+
+
+rule "sub_condition0"
+    activation-group "3.sub_condition"
+    salience 2
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+when
+    $Model_8b : Model_8b(  )  
+    Object( (($Model_8b.name_8 >= 100 && ($Model_8b.name_8 == 2000 || $Model_8b.name_8 == 10000))) )  
+then
+results.add("100")
+
+end
+
+rule "sub_condition1"
+    activation-group "3.sub_condition"
+    salience 1
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+when
+    Object(  )  
+then
+results.add("")
+
+end
+
+

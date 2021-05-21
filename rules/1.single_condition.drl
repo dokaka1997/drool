@@ -1,0 +1,45 @@
+package rules 
+
+import java.util.*
+import java.math.*
+
+global List results
+
+dialect "mvel"
+
+declare  Customer 
+
+    age : String  
+end
+
+
+rule "single_condition0"
+    activation-group "1.single_condition"
+    salience 2
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+     
+when
+    $Customer : Customer(  )  
+    Object( (($Customer.age == 40)) )  
+then
+results.add("10")
+
+end
+
+rule "single_condition1"
+    activation-group "1.single_condition"
+    salience 1
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+     
+when
+    Object(  )  
+then
+results.add("1")
+
+end
+
+

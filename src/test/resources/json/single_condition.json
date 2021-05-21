@@ -1,0 +1,68 @@
+{
+  "rules": [
+    {
+      "ruleType": "UI",
+      "dataModelGroup": 1,
+      "ruleSetId": 1,
+      "ruleId": 24,
+      "ruleName": "single_condition",
+      "effectiveDateStart": 1609434000000,
+      "effectiveDateEnd": 1640969999999,
+      "status": true,
+      "description": "single condition",
+      "attributes": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "listRule": [
+        {
+          "order": 0,
+          "itemCondition": [
+            {
+              "items": [
+                {
+                  "type": "normal",
+                  "table": "Customer",
+                  "field": "age",
+                  "condition": "",
+                  "tableIndex": 0,
+                  "left": "$Customer.age",
+                  "operator": "==",
+                  "right": "40"
+                }
+              ],
+              "condition": ""
+            }
+          ],
+          "action": {
+            "returnType": "RETURN",
+            "value": "10"
+          },
+          "dataModels": [
+            {
+              "tableName": "Customer",
+              "attributes": [
+                {
+                  "id": 1,
+                  "name": "age",
+                  "dataType": "STRING"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 1,
+          "itemCondition": [],
+          "action": {
+            "returnType": "RETURN",
+            "value": "1"
+          },
+          "dataModels": []
+        }
+      ]
+    }
+  ]
+}

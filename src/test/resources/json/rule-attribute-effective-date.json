@@ -1,0 +1,195 @@
+{
+  "rules": [
+    {
+      "ruleType": "UI",
+      "dataModelGroup": 1,
+      "ruleSetId": 1,
+      "ruleId": 20,
+      "ruleName": "rule-attribute-effective",
+      "effectiveDateStart": 1609434000000,
+      "effectiveDateEnd": 1619369999000,
+      "status": true,
+      "description": "rule attribute",
+      "listRule": [
+        {
+          "itemCondition": [
+            {
+              "items": [
+                {
+                  "type": "normal",
+                  "table": "Model_Data",
+                  "field": "field_int",
+                  "condition": "",
+                  "tableIndex": 1,
+                  "left": "$Model_Data.field_int",
+                  "operator": "==",
+                  "right": "10"
+                }
+              ],
+              "condition": ""
+            }
+          ],
+          "action": {
+            "returnType": "RETURN",
+            "value": "ACTION"
+          },
+          "dataModels": [
+            {
+              "tableName": "Model_Data",
+              "id": 54,
+              "attributes": [
+                {
+                  "id": 84,
+                  "name": "field_int",
+                  "dataType": "INTEGER"
+                },
+                {
+                  "id": 80,
+                  "name": "field_string",
+                  "dataType": "STRING"
+                },
+                {
+                  "id": 85,
+                  "name": "field_byte",
+                  "dataType": "BYTE"
+                },
+                {
+                  "id": 82,
+                  "name": "field_long",
+                  "dataType": "LONG"
+                },
+                {
+                  "id": 83,
+                  "name": "field_float",
+                  "dataType": "FLOAT"
+                },
+                {
+                  "id": 76,
+                  "name": "field_date",
+                  "dataType": "DATE"
+                },
+                {
+                  "id": 81,
+                  "name": "field_big_decimal",
+                  "dataType": "BIG_DECIMAL"
+                },
+                {
+                  "id": 79,
+                  "name": "field_double",
+                  "dataType": "DOUBLE"
+                },
+                {
+                  "id": 78,
+                  "name": "field_short",
+                  "dataType": "SHORT"
+                },
+                {
+                  "id": 77,
+                  "name": "field_boolean",
+                  "dataType": "BOOLEAN"
+                },
+                {
+                  "id": 75,
+                  "name": "field_number",
+                  "dataType": "NUMBER"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "itemCondition": [],
+          "action": {
+            "returnType": "RETURN",
+            "value": "ACTION"
+          }
+        }
+      ],
+      "vocabularies": [
+        {
+          "id": -1,
+          "tableName": "Choose Table",
+          "attributes": [
+            {
+              "id": -1,
+              "name": "Choose Attribute"
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "tableName": "Model_Data",
+          "isSelected": true,
+          "attributes": [
+            {
+              "id": 84,
+              "status": "ACTIVE",
+              "name": "field_int",
+              "dataType": "INTEGER"
+            },
+            {
+              "id": 80,
+              "status": "ACTIVE",
+              "name": "field_string",
+              "dataType": "STRING"
+            },
+            {
+              "id": 85,
+              "status": "ACTIVE",
+              "name": "field_byte",
+              "dataType": "BYTE"
+            },
+            {
+              "id": 82,
+              "status": "ACTIVE",
+              "name": "field_long",
+              "dataType": "LONG"
+            },
+            {
+              "id": 83,
+              "status": "ACTIVE",
+              "name": "field_float",
+              "dataType": "FLOAT"
+            },
+            {
+              "id": 76,
+              "status": "ACTIVE",
+              "name": "field_date",
+              "dataType": "DATE"
+            },
+            {
+              "id": 81,
+              "status": "ACTIVE",
+              "name": "field_big_decimal",
+              "dataType": "BIG_DECIMAL"
+            },
+            {
+              "id": 79,
+              "status": "ACTIVE",
+              "name": "field_double",
+              "dataType": "DOUBLE"
+            },
+            {
+              "id": 78,
+              "status": "ACTIVE",
+              "name": "field_short",
+              "dataType": "SHORT"
+            },
+            {
+              "id": 77,
+              "status": "ACTIVE",
+              "name": "field_boolean",
+              "dataType": "BOOLEAN"
+            },
+            {
+              "id": 75,
+              "status": "ACTIVE",
+              "name": "field_number",
+              "dataType": "NUMBER"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

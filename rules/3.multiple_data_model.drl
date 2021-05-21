@@ -1,0 +1,49 @@
+package rules 
+
+import java.util.*
+import java.math.*
+
+global List results
+
+dialect "mvel"
+
+declare  Model_8b 
+
+    name_8 : Number  
+end
+
+declare  Model_9a 
+
+    name_9c : Number  
+end
+
+
+rule "multiple_data_model0"
+    activation-group "3.multiple_data_model"
+    salience 2
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+when
+    $Model_8b : Model_8b(  )  
+    $Model_9a : Model_9a(  )  
+    Object( (($Model_8b.name_8 >= 10 && $Model_9a.name_9c >= 20)) )  
+then
+results.add("100")
+
+end
+
+rule "multiple_data_model1"
+    activation-group "3.multiple_data_model"
+    salience 1
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+when
+    Object(  )  
+then
+results.add("0")
+
+end
+
+

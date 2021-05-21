@@ -1,0 +1,45 @@
+package rules 
+
+import java.util.*
+import java.math.*
+
+global List results
+
+dialect "mvel"
+
+declare  database_driver 
+
+    driver_name : String  
+end
+
+
+rule "hehe - qqq - 0"
+    agenda-group "1.2"
+    activation-group "1.2.16"
+    salience 2
+    date-effective "20-May-2021 0:0:0.0"
+    date-expires "17-Apr-2021 14:49:39.1"
+    enabled true
+when
+    $database_driver : database_driver(  )  
+    Object( (($database_driver.driver_name != "a")) )  
+then
+results.add("b")
+
+end
+
+rule "hehe - qqq - 1"
+    agenda-group "1.2"
+    activation-group "1.2.16"
+    salience 1
+    date-effective "20-May-2021 0:0:0.0"
+    date-expires "17-Apr-2021 14:49:39.1"
+    enabled true
+when
+    Object(  )  
+then
+results.add("c")
+
+end
+
+

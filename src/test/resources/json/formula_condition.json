@@ -1,0 +1,78 @@
+{
+  "rules": [
+    {
+      "ruleType": "UI",
+      "dataModelGroup": 1,
+      "ruleSetId": 1,
+      "ruleId": 13,
+      "ruleName": "formula_condition",
+      "effectiveDateStart": 1609434000000,
+      "effectiveDateEnd": 1640969999999,
+      "status": true,
+      "description": "formula condition",
+      "attributes": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "listRule": [
+        {
+          "order": 0,
+          "itemCondition": [
+            {
+              "items": [
+                {
+                  "type": "normal",
+                  "table": "Customer2",
+                  "field": "age",
+                  "condition": "",
+                  "tableIndex": 0,
+                  "left": "$Customer2.age1 + $Customer2.age2",
+                  "operator": "==",
+                  "right": "$Customer2.age3"
+                }
+              ],
+              "condition": ""
+            }
+          ],
+          "action": {
+            "returnType": "RETURN",
+            "value": "ACTION"
+          },
+          "dataModels": [
+            {
+              "tableName": "Customer2",
+              "attributes": [
+                {
+                  "id": 1,
+                  "name": "age1",
+                  "dataType": "NUMBER"
+                },
+                {
+                  "id": 2,
+                  "name": "age2",
+                  "dataType": "NUMBER"
+                },
+                {
+                  "id": 3,
+                  "name": "age3",
+                  "dataType": "NUMBER"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 1,
+          "itemCondition": [],
+          "action": {
+            "returnType": "RETURN",
+            "value": ""
+          },
+          "dataModels": []
+        }
+      ]
+    }
+  ]
+}

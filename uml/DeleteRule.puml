@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Rule_Management_Service++
+Rule_Management_Service -> Rule_Engine++: Call api delete rule
+
+Rule_Engine -> Rule_Engine++: validate input
+Rule_Engine --> Rule_Engine--: validate done
+
+Rule_Engine -> Resource_File++: delete drl file
+Resource_File --> Rule_Engine--: return response
+
+Rule_Engine --> Rule_Engine--: delete process done
+
+Rule_Engine --> Rule_Management_Service--: return response
+Rule_Management_Service--
+
+@enduml

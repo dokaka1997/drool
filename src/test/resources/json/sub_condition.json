@@ -1,0 +1,134 @@
+{
+  "rules": [
+    {
+      "ruleType": "UI",
+      "dataModelGroup": 1,
+      "ruleSetId": 1,
+      "ruleId": 25,
+      "ruleName": "sub_condition",
+      "effectiveDateStart": 1609434000000,
+      "effectiveDateEnd": 1640969999999,
+      "status": true,
+      "description": "sub condition",
+      "listRule": [
+        {
+          "itemCondition": [
+            {
+              "items": [
+                {
+                  "type": "normal",
+                  "table": "Model_8b",
+                  "field": "name_8",
+                  "condition": "",
+                  "tableIndex": 1,
+                  "left": "$Model_8b.name_8",
+                  "operator": ">=",
+                  "right": "100"
+                },
+                {
+                  "items": [
+                    {
+                      "type": "normal",
+                      "table": "Model_8b",
+                      "field": "name_8",
+                      "condition": "AND",
+                      "tableIndex": 1,
+                      "left": "$Model_8b.name_8",
+                      "operator": "==",
+                      "right": "2000"
+                    },
+                    {
+                      "type": "normal",
+                      "table": "Model_8b",
+                      "field": "name_8",
+                      "condition": "OR",
+                      "tableIndex": 1,
+                      "left": "$Model_8b.name_8",
+                      "operator": "==",
+                      "right": "10000"
+                    }
+                  ],
+                  "type": "subquery",
+                  "condition": ""
+                }
+              ],
+              "condition": ""
+            }
+          ],
+          "action": {
+            "returnType": "RETURN",
+            "value": "100"
+          },
+          "dataModels": [
+            {
+              "tableName": "Model_8b",
+              "id": 53,
+              "attributes": [
+                {
+                  "id": 75,
+                  "name": "name_8",
+                  "dataType": "NUMBER"
+                },
+                {
+                  "id": 75,
+                  "name": "name_8",
+                  "dataType": "NUMBER"
+                },
+                {
+                  "id": 75,
+                  "name": "name_8",
+                  "dataType": "NUMBER"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "itemCondition": [],
+          "action": {
+            "returnType": "RETURN",
+            "value": ""
+          },
+          "value": "1"
+        }
+      ],
+      "vocabularies": [
+        {
+          "id": -1,
+          "tableName": "Choose Table",
+          "attributes": [
+            {
+              "id": -1,
+              "name": "Choose Attribute"
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "tableName": "Model_8b",
+          "isSelected": true,
+          "attributes": [
+            {
+              "id": 75,
+              "status": "ACTIVE",
+              "name": "name_8",
+              "dataType": "NUMBER"
+            },
+            {
+              "id": 79,
+              "status": "ACTIVE",
+              "name": "name_8",
+              "dataType": "NUMBER"
+            },
+            {
+              "id": 78,
+              "status": "ACTIVE",
+              "name": "name_8",
+              "dataType": "NUMBER"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

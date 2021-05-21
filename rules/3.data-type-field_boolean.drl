@@ -1,0 +1,53 @@
+package rules 
+
+import java.util.*
+import java.math.*
+
+global List results
+
+dialect "mvel"
+
+declare  Model_Data 
+
+    field_int : Integer  
+    field_string : String  
+    field_byte : Byte  
+    field_long : Long  
+    field_float : Float  
+    field_date : Date  
+    field_big_decimal : BigDecimal  
+    field_double : Double  
+    field_short : Short  
+    field_boolean : Boolean  
+    field_number : Number  
+end
+
+
+rule "data-type-field_boolean0"
+    activation-group "3.data-type-field_boolean"
+    salience 2
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+when
+    $Model_Data : Model_Data(  )  
+    Object( (($Model_Data.field_boolean == "true")) )  
+then
+results.add("ACTION")
+
+end
+
+rule "data-type-field_boolean1"
+    activation-group "3.data-type-field_boolean"
+    salience 1
+    date-effective "01-Jan-2021 0:0:0.0"
+    date-expires "31-Dec-2021 23:59:59.999"
+    enabled true
+when
+    Object(  )  
+then
+results.add("")
+
+end
+
+
